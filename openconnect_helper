@@ -1,11 +1,8 @@
 #!/bin/bash
+
 servers=(
-    c1.kmak.us
-    c2.kmak.us 
-    c3.kmak.us
-#    hdk.csw5.kmak.xyz
-#    sja.c24.kmak.xyz
-#    wen.c25.kmak.xyz
+your.server.com
+your.server2.com
 )
 
 min_rtt() {
@@ -16,5 +13,5 @@ min_rtt() {
 fastest="$(for host in ${servers[@]}; do min_rtt $host; done | sort -V | head -n1)"
 fastest_host="${fastest#* }"
 
-echo 924482 | doas openconnect $fastest_host:443 --user=km16236236 --passwd-on-stdin
+echo PASSWORD | doas openconnect $fastest_host:443 --user=USERNAME --passwd-on-stdin
 
