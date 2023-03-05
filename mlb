@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# Written by: Woland
+# List PDFs in given directory and opens selection in Evince
+
+# Change to PDFs path
+cd $HOME/Downloads/Documents/ || return
+
+# List only the files with .pdf format
+# Open selected file in Evince
+if book=$(find . -name "*.pdf" | sed 's/\.\///' | dmenu -p 'Library:' -l 15 -fn 'monospace-12' -nb '#282828' -nf '#fbf1c7' -sb '#458588' -sf '#000' -l 20 ); then
+  evince "$book"
+fi
+
+
+
+
+
+
+
+
+# Get terminal PPID and close terminal when the script is done
+# PPPID=$(awk '{print $4}' "/proc/$PPID/stat")
+# kill "$PPPID"
+
+# book=$(find . -name "*.pdf" | dmenu -p "Select:")
+# (( ${#book} > 0 )) && evince "$book" &
+# evince "$book" & 
+#====================
+# Old Version, No FZF
+#====================
+# list=$(ls | grep -E '\.pdf$')
+
+# PS3="Select Book: "
+# select book in ${list}
+
+#  do 
+#      evince $book
+#  done

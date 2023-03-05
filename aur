@@ -1,0 +1,11 @@
+#!/bin/bash
+# Simple script to search the aur using the w3m browser
+
+printf "Please type your search query\n " 
+echo ''
+
+read query 
+# lynx https://archlinux.org/packages/?q=$query
+
+w3m https://aur.archlinux.org/packages?O=0\&K=$query
+

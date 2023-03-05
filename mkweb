@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+#Author Woland
+#Makes Web Project & Appends Basic Skeleton To The Relative Files
+
+mkdir web"$(date +"%e-%R-%S")"
+touch web"$(date +"%e-%R-%S")"/index.html
+touch web"$(date +"%e-%R-%S")"/script.js
+mkdir web"$(date +"%e-%R-%S")"/style && touch web"$(date +"%e-%R-%S")"/style/style.css
+mkdir web"$(date +"%e-%R-%S")"/img
+mkdir web"$(date +"%e-%R-%S")"/fonts
+
+echo "<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href=style/style.css>
+    <title>Document</title>
+
+    <style>
+
+
+    </style>
+    </head>
+<body>
+        <p> </p>
+        <div> </div>
+        
+
+        <script src="script.js"> 
+
+        </script>
+</body>
+</html>
+
+" >> web"$(date +"%e-%R-%S")"/index.html
+
+echo "*{
+    padding: 0;
+    margin: 0;
+    left:0;
+}" >> web"$(date +"%e-%R-%S")"/style/style.css
+
