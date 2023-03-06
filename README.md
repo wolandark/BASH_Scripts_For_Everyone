@@ -1,5 +1,5 @@
-# BASH_Scripts_For_Everyone
-A collection of BASH scripts that might benefit all *nix users
+# BASHScripts For Everyone
+## A collection of BASH scripts that might benefit all *nix users
 
 
 - aur : A script tp search the AUR with w3m terminal browser
