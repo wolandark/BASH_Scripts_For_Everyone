@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Input .img or .iso file path" 
+read -e iso
+echo''
+lsblk 
+echo ''
+echo -e "Input USB device path to write to. All device paths must start with /dev\nexample: /dev/sdb"
+read -e dev
+
+sudo dd if=$iso of=$dev bs=4M status=progress
+
+echo "Device is ready and bootable now"
