@@ -1,21 +1,26 @@
 # BASH Scripts For Everyone
+
 ## A collection of BASH scripts that might benefit all *nix users
 
 
-- aur : A script tp search the AUR with w3m terminal browser
+- **File Operations** directory contain 3 scripts for finding, copying and deleting files by extension and name
 
-- bfetch : A basic fetch script in BASH
+- **aur** : A script tp search the AUR with w3m terminal browser
 
-- mkweb : A Script that creates a directory with current date and makes the essential three files for a web development project along with a basic structure for HTML/CSS
+- **bfetch** : A basic fetch script in BASH
 
-- mlb : A library script that looks in a given path and find all PDF files anf displays a menu using dmenu and opens the PDFs in evince
+- **mkweb** : A Script that creates a directory with current date and makes the essential three files for a web development project along with a basic structure for HTML/CSS
 
-- openconnect_helper : A script that makes connecting to the fastest openconnect server a piece of cake
+- **mlb** : A library script that looks in a given path and find all PDF files anf displays a menu using dmenu and opens the PDFs in evince
 
-- scoreboard.sh : Scoreboard
+- **openconnect_helper** : A script that makes connecting to the fastest openconnect server a piece of cake
 
-- watcher.sh : Watch system resources (needs improvemnet for network monitoring)
+- **scoreboard.sh** : Scoreboard
 
-- word-lookup : Highlight any word and get a definition. (Must be bound to a keybonding and needs dunst)
+- **watcher.sh** : Watch system resources (needs improvement for network monitoring)
 
-- ezdd : A script that makes burning iso and img files to USB devices easy
+- **word-lookup** : Highlight any word and get a definition. (Must be bound to a key binding and needs dunst)
+
+- **ezdd** : A script that makes burning iso and img files to USB devices easy
+
+# Feel free to suggest or add scripts to this repo through PR
