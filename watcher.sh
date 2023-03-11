@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Written By Woland
+
+# Simple resource watcher script
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 while true; do
     echo "Memory Usage: $(free -m | awk 'NR==2{printf "%.2f%%\t\t", $3*100/$2 }')"
     echo "CPU Usage: $(top -bn1 | grep load | awk '{printf "%.2f%%\t\t\n", $(NF-2)}')"

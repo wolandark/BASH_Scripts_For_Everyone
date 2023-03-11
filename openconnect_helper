@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Written By Woland
+
+# ping and connect to the fastest openconnect server
+
+#Dependency:
+#          openconnect awk/gawk
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+#List of servers to ping
 servers=(
 your.server.com
 your.server2.com
@@ -13,5 +24,6 @@ min_rtt() {
 fastest="$(for host in ${servers[@]}; do min_rtt $host; done | sort -V | head -n1)"
 fastest_host="${fastest#* }"
 
-echo PASSWORD | doas openconnect $fastest_host:443 --user=USERNAME --passwd-on-stdin
+#replace PASSWORD with your password and USERNAME with your username in the line below 
+echo PASSWORD | sudo openconnect $fastest_host:443 --user=USERNAME --passwd-on-stdin
 

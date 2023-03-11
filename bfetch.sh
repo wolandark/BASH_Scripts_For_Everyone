@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Written By Woland
+
+# Basic fetch script in bash
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 # Get system information
 OS=$(uname -s)
 HOSTNAME=$(uname -n)

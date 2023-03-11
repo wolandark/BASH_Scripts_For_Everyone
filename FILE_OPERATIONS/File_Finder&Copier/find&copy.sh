@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Written By Woland
+
+# Find files by name and copy them to a directory
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 # Destination directory in home
 DEST_DIR=~/FOUNDFILES
 

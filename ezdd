@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Written By Woland
+
+# burns ISO and IMG files to USB
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 echo "Input .img or .iso file path" 
 read -e iso
 echo''

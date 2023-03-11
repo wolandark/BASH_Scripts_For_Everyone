@@ -1,7 +1,11 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-#Author Woland
-#Makes Web Project & Appends Basic Skeleton To The Relative Files
+# Written By Woland
+
+# Makes Web Project & Appends Basic Skeleton To The Relative Files
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
 
 mkdir web"$(date +"%e-%R-%S")"
 touch web"$(date +"%e-%R-%S")"/index.html

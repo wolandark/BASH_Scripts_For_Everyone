@@ -1,5 +1,14 @@
 #!/bin/bash
+
+# Written By Woland
+
 # Simple script to search the aur using the w3m browser
+
+# Dependency:
+#           w3m or any other cli browser
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
 
 printf "Please type your search query\n " 
 echo ''

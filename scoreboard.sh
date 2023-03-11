@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Written By Woland
+
+# Simple scoreboard
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 # Initialize score variables
 A=0
 B=0
