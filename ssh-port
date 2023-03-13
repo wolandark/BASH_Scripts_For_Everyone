@@ -1,5 +1,12 @@
 #!/bin/bash
-#
+
+# Written By Woland
+
+# Change SSH port without editing the config manually
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 echo "enter desired port number" 
 read port
 
