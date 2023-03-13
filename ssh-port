@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+echo "enter desired port number" 
+read port
+
+#uncomment the line containing the word Port
+sed -i '/^#.*Port/s/^#//' /etc/ssh/sshd_config
+
+#change port 
+sed -i "s/Port\ 22/Port\ $port/g" /etc/ssh/sshd_config
