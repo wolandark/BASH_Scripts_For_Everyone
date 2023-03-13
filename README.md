@@ -27,4 +27,6 @@
 
 - **vpn-ssh.sh** : A helper script for poor man's vpn using sshuttle
 
+- **RSS** : A basic RSS script for the terminal 
+
 # Feel free to suggest or add scripts to this repo through PR

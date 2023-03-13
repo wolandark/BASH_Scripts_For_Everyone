@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Written By Woland
+
+# Super basic RSS script
+# Add RSS link to FEED_URL
+
+#Dependency:
+#          curl sed awk
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+# URL of the RSS feed
+FEED_URL="http://rss.cnn.com/rss/cnn_topstories.rss"
+
+# Download the RSS feed
+
+curl -s $FEED_URL > feed.xml
+
+# Extract the article titles
+sed -e 's/>/>\n/g' feed.xml | awk '/title/ , /\/title/' | grep -v 'title>' | sed -e 's/^.*\[//' -e 's/...$//'
+# grep  -E "<title>[^<]+</title>" feed.xml | sed -e "s/<title>//" -e "s/<\/title>//"
