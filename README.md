@@ -22,5 +22,6 @@
 - **word-lookup** : Highlight any word and get a definition. (Must be bound to a key binding and needs dunst)
 
 - **ezdd** : A script that makes burning iso and img files to USB devices easy
+- **ssh-port** : Switch ssh port without manually editing the config
 
 # Feel free to suggest or add scripts to this repo through PR
