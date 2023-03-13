@@ -29,4 +29,4 @@
 
 - **RSS** : A basic RSS script for the terminal 
 
-# Feel free to suggest or add scripts to this repo through PR
+### Feel free to suggest or add scripts to this repo through PR
