@@ -1,0 +1,43 @@
+#!/bin/bash
+
+# Written by Woland
+
+# Downloads & Launches tetrio-desktop
+
+# All files downloaded from https://tetr.io/about/desktop
+# It is good to move this script to your $PATH
+
+if ! [[ -f $HOME/Downloads/TETR.IO\ Setup.tar.gz ]]; then
+    wget https://tetr.io/about/desktop/builds/TETR.IO\ Setup.tar.gz -P $HOME/Downloads
+    echo "Download Complete"
+fi
+
+echo "Extracting archive, your game will launch soon"
+tar -xzvf $HOME/Downloads/TETR.IO\ Setup.tar.gz -C $HOME/Downloads/
+
+DIR=$HOME/Downloads/tetrio-desktop-8.0.0/
+
+if [ -d "$DIR" ]; then
+    cd "$DIR" || return
+    echo "Changed into directory"
+else
+    read -rp "Directory does not exist. Please enter the path: " path
+    if [ -d "$path" ]; then
+        cd "$path" || return
+        echo "Changed into directory"
+    else
+        echo "The entered path is not a directory"
+    fi
+fi
+
+if [ -f "tetrio-desktop" ]; then
+    nohup "$DIR/tetrio-desktop" &>/dev/null &
+    echo "File executed"
+else
+    echo "File does not exist"
+fi
+
+sed -i '8,14 s/^/#/' ~/tetrio
+sed -i '38,40 s/^/#/' ~/tetrio
+echo -e "\033[1;31mYou can launch the game using the same script later, it wont download the file again\033[0m"
+exit 0
