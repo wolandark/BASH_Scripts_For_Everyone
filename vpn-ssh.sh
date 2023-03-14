@@ -6,7 +6,7 @@
 
 #Dpendency:
 #         sshuttle
-#         Add your servers to the optioans array. The syntax is ip:port
+#         Add your servers to the options array. The syntax is ip:port
 
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
