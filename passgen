@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Written By Woland
+
+#Generate complex passwords 
+
+#Dependency:
+#         /dev/urandom
+#         tr
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+CHARSET="[:alnum:]" # This will generate alphanumeric characters
+PASSWORD_LENGTH=15
+
+generate_password() {
+  PASSWORD=$(head /dev/urandom | tr -dc "$CHARSET" | head -c "$PASSWORD_LENGTH")
+  echo "$PASSWORD"
+}
+
+for i in {1..4}
+do
+  password=$(generate_password)
+  echo "Password $i: $password"
+done
