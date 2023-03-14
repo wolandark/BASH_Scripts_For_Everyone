@@ -5,6 +5,8 @@
 
 - **File Operations** directory contain 3 scripts for finding, copying and deleting files by extension and name
 
+- **feh.sh** : An automatic wallpaper changer using feh
+
 - **aur** : A script tp search the AUR with w3m terminal browser
 
 - **bfetch** : A basic fetch script in BASH
@@ -28,5 +30,7 @@
 - **vpn-ssh.sh** : A helper script for poor man's vpn using sshuttle
 
 - **RSS** : A basic RSS script for the terminal 
+
+- **tetrio** : A script that downloads the tetrio-desktop game from the official website 
 
 ### Feel free to suggest or add scripts to this repo through PR
