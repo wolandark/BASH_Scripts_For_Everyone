@@ -14,7 +14,8 @@
 PS3="Select the server you wish to connect to: "
 options=(
 1.1.1.1:22
-2.2.2.2:22
+2.2.2.2:80
+3.3.3.3:2222
 )
 
 default_subnet="0/0"

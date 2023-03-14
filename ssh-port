@@ -15,3 +15,6 @@ sed -i '/^#.*Port/s/^#//' /etc/ssh/sshd_config
 
 #change port 
 sed -i "s/Port\ 22/Port\ $port/g" /etc/ssh/sshd_config
+
+# Restart sshd service
+sudo systemctl restart sshd

@@ -11,7 +11,6 @@
 A=0
 B=0
 
-# Main loop
 while true; do
     # Print score board
     echo "A: $PLAYER1_SCORE"

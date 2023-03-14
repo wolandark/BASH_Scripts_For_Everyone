@@ -15,9 +15,7 @@
 FEED_URL="http://rss.cnn.com/rss/cnn_topstories.rss"
 
 # Download the RSS feed
-
 curl -s $FEED_URL > feed.xml
 
 # Extract the article titles
 sed -e 's/>/>\n/g' feed.xml | awk '/title/ , /\/title/' | grep -v 'title>' | sed -e 's/^.*\[//' -e 's/...$//'
-# grep  -E "<title>[^<]+</title>" feed.xml | sed -e "s/<title>//" -e "s/<\/title>//"

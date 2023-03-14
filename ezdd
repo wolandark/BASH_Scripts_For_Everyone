@@ -8,12 +8,12 @@
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
 
 echo "Input .img or .iso file path" 
-read -e iso
+read -re iso
 echo''
 lsblk 
 echo ''
 echo -e "Input USB device path to write to. All device paths must start with /dev\nexample: /dev/sdb"
-read -e dev
+read -re dev
 
 sudo dd if=$iso of=$dev bs=4M status=progress
 

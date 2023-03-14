@@ -12,7 +12,7 @@
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
 
 #PATH to wallpapers
-PIC_DIR="$HOME/Pictures/Nature/"
+PIC_DIR="$HOME/Pictures/"
 PIC_LIST=("$PIC_DIR"*)
 # echo "${PIC_LIST[@]}"
 

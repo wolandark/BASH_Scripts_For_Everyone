@@ -26,6 +26,7 @@ GPU=$(lspci | grep -i vga | awk -F: '{print $3}')
 
 # Print ASCCI art if .face.icon is present, uncomment
 # jp2a ~/.face.icon --size=40x20 --colors
+
 # Output the information
 echo "OS: $OS"
 echo "Hostname: $HOSTNAME"

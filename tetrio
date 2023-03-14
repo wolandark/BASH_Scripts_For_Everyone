@@ -6,6 +6,7 @@
 
 # All files downloaded from https://tetr.io/about/desktop
 # It is good to move this script to your $PATH
+# Not affiliated with the game's devs
 
 if ! [[ -f $HOME/Downloads/TETR.IO\ Setup.tar.gz ]]; then
     wget https://tetr.io/about/desktop/builds/TETR.IO\ Setup.tar.gz -P $HOME/Downloads

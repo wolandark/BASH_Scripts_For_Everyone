@@ -3,6 +3,7 @@
 # Written By Woland
 
 # Simple resource watcher script
+# Needs improvement in the Network section
 
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone

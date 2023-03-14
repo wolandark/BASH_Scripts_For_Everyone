@@ -3,6 +3,7 @@
 # Written By Woland
 
 # Makes Web Project & Appends Basic Skeleton To The Relative Files
+# The project dir will be named using current date and time
 
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone

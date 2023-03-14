@@ -8,7 +8,7 @@
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
 
 # Destination directory in home
-DEST_DIR=~/FOUNDFILES
+DEST_DIR=$HOME/FOUNDFILES
 
 # Create the destination directory if it doesn't already exist
 mkdir -p $DEST_DIR
