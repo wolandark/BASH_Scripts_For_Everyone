@@ -13,7 +13,7 @@
 
 - **mkweb** : A Script that creates a directory with current date and makes the essential three files for a web development project along with a basic structure for HTML/CSS
 
-- **mlb** : A library script that looks in a given path and find all PDF files anf displays a menu using dmenu and opens the PDFs in evince
+- **mylib** : A library script that looks in a given path and find all PDF files anf displays a menu using dmenu and opens the PDFs in evince
 
 - **openconnect_helper** : A script that makes connecting to the fastest openconnect server a piece of cake
 
