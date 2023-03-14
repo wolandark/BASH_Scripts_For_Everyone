@@ -31,6 +31,8 @@
 
 - **RSS** : A basic RSS script for the terminal 
 
+- **passgen** : A password generator in BASH
+
 - **tetrio** : A script that downloads the tetrio-desktop game from the official website 
 
 ### Feel free to suggest or add scripts to this repo through PR
