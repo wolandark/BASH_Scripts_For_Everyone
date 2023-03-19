@@ -7,6 +7,8 @@
 
 - **feh.sh** : An automatic wallpaper changer using feh
 
+- **betterfeh** : An improved version of feh.sh that takes command line arguments for interval, wallpaper looping order etc ...
+
 - **aur** : A script tp search the AUR with w3m terminal browser
 
 - **bfetch** : A basic fetch script in BASH
