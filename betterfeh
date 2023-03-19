@@ -6,8 +6,8 @@
 
 #Dependency:
 #          feh
-#          usage
 #          change PIC_DIR to point to your wallpapers directory & run the script
+#          if -t is provided, it must precede other flags
 
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
@@ -23,36 +23,40 @@ PIC_LIST=("$PIC_DIR"*)
 usage () {
     echo "Usage: $0 [-h] [-t interval] [-e] [-r reverse]"
     echo "Options:"
-    echo "  -t interval    Set wallpaper change interval in seconds (default: $default_interval)"
-    echo "  -e             Start from a wallpaper"
+    echo "  -t interval    Set wallpaper change interval in seconds (default: $default_interval). Must precede other flags if provided"
+    echo "  -e             Start from a random wallpaper"
     echo "  -r             Set wallpaper in reverse order"
     echo "  -h             Display this help message"
 }
 
 #Main Function
-set_pic(){
-    if [ "$1" == "-r" ]; then
-        for (( i=${#PIC_LIST[@]}-1; i>=0; i-- ))
-        do
-            feh --bg-scale "${PIC_LIST[i]}"
-            sleep "${interval}"
-        done
-    elif [ "$1" == "-e" ]; then
-        sorted_array=($(shuf -e "${PIC_LIST[@]}"))
+set_pic() {
+    local interval=${1:-$default_interval}
+    while true
+    do
+        if [ "$2" == "-r" ]; then
+            for (( i=${#PIC_LIST[@]}-1; i>=0; i-- ))
+            do
+                feh --bg-scale "${PIC_LIST[i]}"
+                sleep "${interval}"
+            done
+        elif [ "$2" == "-e" ]; then
+            random_pic=${PIC_LIST[$RANDOM % ${#PIC_LIST[@]}]}
 
-        for i in "${sorted_array[@]}"
-        do
-            feh --bg-scale "$i"
-            sleep "${interval}"
-        done
-    else
-        # Loop through the array normally if no flag is given
-        for i in "${PIC_LIST[@]}"
-        do
-            feh --bg-scale "$i"
-            sleep "${interval}"
-        done
-    fi
+            for i in "${sorted_array[@]}"
+            do
+                feh --bg-scale "$i"
+                sleep "${interval}"
+            done
+        else
+            # Loop through the array normally if no flag is given
+            for i in "${PIC_LIST[@]}"
+            do
+                feh --bg-scale "$i"
+                sleep "${interval}"
+            done
+        fi
+    done
 }
 
 #getops
@@ -65,11 +69,11 @@ while getopts ":ht:re" opt; do
             interval=${OPTARG}
             ;;
         r )
-            set_pic "-r"
+            set_pic ${interval:-$default_interval} "-r"
             exit 0
             ;;
         e )
-            set_pic "-e"
+            set_pic ${interval:-$default_interval} "-r"
             exit 0
             ;;
         \? )
@@ -86,4 +90,8 @@ shift $((OPTIND -1))
 interval=${interval:-$default_interval}
 
 # Call the set_pic function
-set_pic
+if [ -z "${1}" ]; then
+    set_pic ${interval}
+else
+    set_pic ${1} ${interval}
+fi
