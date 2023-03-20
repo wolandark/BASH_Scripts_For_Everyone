@@ -43,7 +43,7 @@ set_pic() {
         elif [ "$2" == "-e" ]; then
             random_pic=${PIC_LIST[$RANDOM % ${#PIC_LIST[@]}]}
 
-            for i in "${sorted_array[@]}"
+            for i in "${PIC_LIST[@]}"
             do
                 feh --bg-scale "$i"
                 sleep "${interval}"
