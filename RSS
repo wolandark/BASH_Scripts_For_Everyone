@@ -3,7 +3,7 @@
 # Written By Woland
 
 # Super basic RSS script
-# Add RSS link to FEED_URL
+# Add RSS link to FEED_URL or specify with -f 
 
 #Dependency:
 #          curl sed awk
@@ -11,11 +11,44 @@
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
 
-# URL of the RSS feed
+USAGE="Usage: $0 [-h] [-f FEED_URL]"
+
+usage() {
+  echo $USAGE
+  echo "  -h                display this help message"
+  echo "  -f FEED_URL       specify the URL of the RSS feed"
+}
+
 FEED_URL="http://rss.cnn.com/rss/cnn_topstories.rss"
 
-# Download the RSS feed
+while getopts ":hf:" opt; do
+  case ${opt} in
+    h )
+      usage
+      exit 0
+      ;;
+    f )
+      FEED_URL=$OPTARG
+      ;;
+    \? )
+      echo "Invalid option: -$OPTARG" >&2
+      usage
+      exit 1
+      ;;
+    : )
+      echo "Option -$OPTARG requires an argument." >&2
+      usage
+      exit 1
+      ;;
+  esac
+done
+
+if [ -z "$FEED_URL" ]; then
+  echo "Please provide a URL for the RSS feed."
+  usage
+  exit 1
+fi
+
 curl -s $FEED_URL > feed.xml
 
-# Extract the article titles
 sed -e 's/>/>\n/g' feed.xml | awk '/title/ , /\/title/' | grep -v 'title>' | sed -e 's/^.*\[//' -e 's/...$//'

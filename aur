@@ -10,11 +10,41 @@
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
 
-printf "Please type your search query\n"
-echo ''
+USAGE="Usage: $0 [-h] [-q query]"
 
-read query 
+usage() {
+  echo $USAGE
+  echo "  -h                display this help message"
+  echo "  -f FEED_URL       specify the search query"
+}
+# printf "Please type your search query\n"
+# echo ''
+
+# read query 
 # lynx https://archlinux.org/packages/?q=$query
+
+while getopts ":hq:" opt;do
+    case ${opt} in
+        h )
+            usage
+            exit 0
+            ;;
+        q )
+            query=$OPTARG
+            ;;
+        \? )
+            echo "Invalid option: -$OPTARG" >&2
+            usage
+            exit 1
+            ;;
+        : )
+            echo "Option -OPTARG requires an argument." >&2
+            usage
+            exit 1
+            ;;
+    esac
+done
+
 
 w3m https://aur.archlinux.org/packages?O=0\&K=$query
 

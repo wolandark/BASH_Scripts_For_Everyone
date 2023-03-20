@@ -7,13 +7,41 @@
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
 
-echo "Input .img or .iso file path" 
-read -re iso
-echo''
-lsblk 
-echo ''
-echo -e "Input USB device path to write to. All device paths must start with /dev\nexample: /dev/sdb"
-read -re dev
+while getopts ":hi:t:" opt; do
+  case $opt in
+    h)
+      echo "Usage: ./ezdd -i [path to .img or .iso file] -t [path to target USB device]"
+      exit 0
+      ;;
+    i)
+      iso=$OPTARG
+      ;;
+    t)
+      dev=$OPTARG
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+if [[ -z $iso ]]; then
+  echo "Input .img or .iso file path:"
+  read -re iso
+fi
+
+if [[ -z $dev ]]; then
+  echo ""
+  lsblk
+  echo ""
+  echo -e "Input USB device path to write to. All device paths must start with /dev\nexample: /dev/sdb"
+  read -re dev
+fi
 
 sudo dd if=$iso of=$dev bs=4M status=progress
 
