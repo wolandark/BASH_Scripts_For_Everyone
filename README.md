@@ -1,7 +1,9 @@
 # BASH Scripts For Everyone
 
 ## A collection of BASH scripts that might benefit all *nix users
-
+<br>
+Some scripts accept a -h flag and display a usage guide, for others there is a description in the script itself. <br>
+The scripts that accept a -h flag for now are: betterfeh aur ezdd <br> 
 
 - **File Operations** directory contain 3 scripts for finding, copying and deleting files by extension and name
 
