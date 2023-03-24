@@ -7,6 +7,8 @@ The scripts that accept a -h flag for now are: betterfeh aur ezdd RSS <br>
 
 - **File Operations** directory contain 3 scripts for finding, copying and deleting files by extension and name
 
+- **ex** : An extractor script for various archive formats
+
 - **feh.sh** : An automatic wallpaper changer using feh
 
 - **betterfeh** : An improved version of feh.sh that takes command line arguments for interval, wallpaper looping order etc ...
