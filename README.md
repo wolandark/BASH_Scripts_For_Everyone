@@ -9,6 +9,8 @@ The scripts that accept a -h flag for now are: betterfeh aur ezdd RSS <br>
 
 - **ex** : An extractor script for various archive formats
 
+- **fzfmenu** : A dmenu replacement using fzf
+
 - **feh.sh** : An automatic wallpaper changer using feh
 
 - **betterfeh** : An improved version of feh.sh that takes command line arguments for interval, wallpaper looping order etc ...
