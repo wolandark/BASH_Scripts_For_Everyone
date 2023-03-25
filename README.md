@@ -11,6 +11,8 @@ The scripts that accept a -h flag for now are: betterfeh aur ezdd RSS <br>
 
 - **fzfmenu** : A dmenu replacement using fzf
 
+- **fzf-power-menu** : A powermenu using fzf to be used with i3wm or any other WM
+
 - **feh.sh** : An automatic wallpaper changer using feh
 
 - **betterfeh** : An improved version of feh.sh that takes command line arguments for interval, wallpaper looping order etc ...
