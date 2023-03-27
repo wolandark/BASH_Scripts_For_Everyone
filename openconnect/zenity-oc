@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Written By Woland
+
+#desc
+
+#Dependency:
+#          bla
+#          usage
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+servers=("server1.com" "server2.com" "server3.com")
+
+
+username=$(zenity --entry --title "Username" --text "Enter your username:")
+password=$(zenity --password --title "Password" --text "Enter your password:")
+
+
+server=$(zenity --list --title "Choose a server" --column=Server "${servers[@]}")
+
+
+sudo openconnect $server --user=$username --passwd-on-stdin <<< $password

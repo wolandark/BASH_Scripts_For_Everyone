@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Define the list of servers
+servers=("server1.com" "server2.com" "server3.com")
+
+# get the username and password from the user
+username=$(echo -e "" | dmenu -p "Username:")
+password=$(echo -e "" | dmenu -p "Password:")
+
+# display the list of servers for the user to choose from
+server=$(printf "%s\n" "${servers[@]}" | dmenu -p "Choose a server:")
+
+# connect to the server using openconnect
+echo $password | sudo openconnect $server --user=$username --passwd-on-stdin
