@@ -15,7 +15,7 @@
 	- [find&copy.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/FILE_OPERATIONS/File_Finder%26Copier/find%26copy.sh)
 * [dmenu-scripts](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/dmenu-scripts)
 	- [mylib](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/mylib)
-	- offline-wiki
+	- [offline-wiki](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/offline-wiki)
 * [fzf-scripts](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/fzf-scripts)
 	- [fzf-power-menu](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/fzf-scripts/fzf-power-menu)
 	- [fzfmenu](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/fzf-scripts/fzfmenu)
@@ -41,5 +41,5 @@
 * [watcher.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/watcher.sh)
 * [word-lookup](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/word-lookup)
 
-**This repo is constantly growing**
+**This repo is constantly growing**<br>
  **Feel free to suggest or add scripts to this repo through PR**
