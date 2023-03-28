@@ -5,7 +5,7 @@
 # Search and read the offline arch wiki
 
 #Dependency:
-#          dmenu
+#          dmenu - arch-wiki-docs
 #          xdg-open browser, falls back to firefox
 
 # https://github.com/wolandark
