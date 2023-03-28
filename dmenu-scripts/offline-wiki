@@ -1,0 +1,16 @@
+#!/bin/bash
+
+dmenu="dmenu -l 20 -nf #F8F8F2 -nb #282A36 -sb #6272A4 -sf #F8F8F2 -fn monospace-11 -p Wiki"
+
+[[ -z $dmenu ]] && echo "Install dmenu fucktard"
+
+browser=xdg-open
+type $browser >/dev/null || opener=firefox
+
+WIKI_PATH=/usr/share/doc/arch-wiki/html/en
+WIKI_SEARCH=$(find "$WIKI_PATH" -name '*.html' | sed "s|$WIKI_PATH\/\(.*\).html|\1|g" | $dmenu -i)
+WIKI="$WIKI_PATH/$WIKI_SEARCH.html"
+
+if [ -n "$WIKI_SEARCH" ]; then
+    $browser $WIKI
+fi
