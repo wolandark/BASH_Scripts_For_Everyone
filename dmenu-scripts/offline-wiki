@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Written By Woland
+
+# Search and read the offline arch wiki
+
+#Dependency:
+#          dmenu
+#          xdg-open browser, falls back to firefox
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 dmenu="dmenu -l 20 -nf #F8F8F2 -nb #282A36 -sb #6272A4 -sf #F8F8F2 -fn monospace-11 -p Wiki"
 
 [[ -z $dmenu ]] && echo "Install dmenu fucktard"

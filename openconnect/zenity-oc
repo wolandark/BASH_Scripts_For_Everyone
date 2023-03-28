@@ -2,11 +2,11 @@
 
 # Written By Woland
 
-#desc
+# openconnect gui with zenity
 
 #Dependency:
-#          bla
-#          usage
+#          zenity , openconnect
+#          add your servers to the array
 
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone

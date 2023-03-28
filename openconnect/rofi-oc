@@ -1,15 +1,18 @@
 #!/bin/bash
 
-# define the list of servers
+# openconnect gui with rofi
+
+#Dependency:
+#          rofi , openconnect
+#          add your servers to the array
+
+
 servers=("server1.com" "server2.com" "server3.com")
 
-# get the username and password from the user
 username=$(echo "" | rofi -dmenu -p "Username:")
 password=$(echo "" | rofi -dmenu -p "Password:" -password)
 
-# display the list of servers for the user to choose from
 server=$(echo -e "${servers[@]}" | rofi -dmenu -p "Choose a server:")
 
-# connect to the server using openconnect
 echo $password | sudo openconnect $server --user=$username --passwd-on-stdin
 
