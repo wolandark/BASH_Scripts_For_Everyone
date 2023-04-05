@@ -16,6 +16,7 @@
 * [dmenu-scripts](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/dmenu-scripts)
 	- [mylib](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/mylib)
 	- [offline-wiki](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/offline-wiki)
+	- [dmenu-config-editor](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/dmenu-config-editor)
 * [fzf-scripts](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/fzf-scripts)
 	- [fzf-power-menu](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/fzf-scripts/fzf-power-menu)
 	- [fzfmenu](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/fzf-scripts/fzfmenu)
