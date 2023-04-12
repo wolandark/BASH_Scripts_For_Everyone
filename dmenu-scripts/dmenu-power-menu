@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Written By Woland
+
+# A powermenu using fzf in i3wm. The only thing that is specific to i3wm is the
+# logout command. You can replace it with systemd logout command or whatever is
+# appropriate for your WM
+
+#Dependency:
+#          fzf
+#          simply run the script and choose the action
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+items="$(echo -e "Shutdown\nReboot\nLogout\nCancel" | dmenu -i -c -bw 3 -l 4 -fn Terminus-16)"
+
+case $items in
+    Shutdown) 
+        doas poweroff
+        ;;
+    Reboot)
+        doas reboot
+        ;;
+    Logout)
+        bspc quit
+        ;;
+    *)
+        ;;
+esac
