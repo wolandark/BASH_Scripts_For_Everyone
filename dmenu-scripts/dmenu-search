@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# Written By Woland
+
+# Search The Web From Dmenu
+
+# Dependency:
+#          dmenu
+#          Change engine to your liking
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 URL='https://duckduckgo.com/?q='
 QUERY=$(echo '' | dmenu -p "Search:" -fn "-xos4-terminus-medium-r-*-*-14-*")
 if [ -n "$QUERY" ]; then
