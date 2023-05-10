@@ -14,13 +14,14 @@
 * [File Finder & Copier](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/FILE_OPERATIONS/File_Finder%26Copier)
 	- [find&copy.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/FILE_OPERATIONS/File_Finder%26Copier/find%26copy.sh)
 * [dmenu-scripts](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/dmenu-scripts)
-	- [mylib](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/mylib)
-	- [offline-wiki](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/offline-wiki)
-	- [dmenu-config-editor](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/dmenu-config-editor)
- * Qutebrowser Scripts
-     - bookmarks.sh
-     - history.sh
-     - quickmarks.sh
+   * [Qutebrowser Scripts](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/dmenu-scripts/Qutebrowser%20Scripts)
+      - [bookmarks.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/Qutebrowser%20Scripts/bookmarks.sh)
+      - [history.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/Qutebrowser%20Scripts/history.sh)
+      - [quickmarks.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/Qutebrowser%20Scripts/quickmarks.sh)
+- [mylib](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/mylib)
+- [offline-wiki](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/offline-wiki)
+- [dmenu-config-editor](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/dmenu-config-editor)
+
 * [fzf-scripts](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/fzf-scripts)
 	- [fzf-power-menu](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/fzf-scripts/fzf-power-menu)
 	- [fzfmenu](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/fzf-scripts/fzfmenu)
