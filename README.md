@@ -3,7 +3,7 @@
 ## A collection of BASH scripts that might benefit all *nix users
 <br>
 
-#### Some scripts accept a -h flag and display a usage guide, for others there is a description in the script itself. The scripts that accept a -h flag for now are: betterfeh aur ezdd RSS
+#### Some scripts accept a -h flag and display a usage guide, for others there is a description in the script itself. The scripts that accept a -h flag for now are: betterfeh aur ezdd RSS PyVirtEnv
 <br> 
 
 * [File Operations](https://github.com/wolandark/BASH_Scripts_For_Everyone/tree/main/FILE_OPERATIONS) 
@@ -46,6 +46,7 @@
 * [vpn-ssh.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/vpn-ssh.sh)
 * [watcher.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/watcher.sh)
 * [word-lookup](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/word-lookup)
+* [PyVirtEnv](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/PyVirtEnv) 
 
 **This repo is constantly growing**<br>
  **Feel free to suggest or add scripts to this repo through PR**
