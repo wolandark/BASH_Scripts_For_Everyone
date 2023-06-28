@@ -33,19 +33,19 @@ source "$1"/bin/activate
 
 # Handling Second, Third & Forth Arguments Individually
 if [ $2 ]; then
-    echo "Installing packages ..."
+    echo "Installing Packages ..."
     pip install $2
 else
-    echo "You did not specify any packages to be installed with pip. Skipping ..."
+    echo "You Did Not Specify Any Packages To Be Installed With pip. Skipping ..."
 fi
 
 if [ $3 ]; then
-    echo "Installing packages ..."
+    echo "Installing Packages ..."
     pip install $3
 fi
 
 if [ $4 ]; then
-    echo "Installing packages ..."
+    echo "Installing Packages ..."
     pip install $4
 fi
 
