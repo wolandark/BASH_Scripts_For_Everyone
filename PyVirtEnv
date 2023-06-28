@@ -1,0 +1,58 @@
+#!/bin/sh
+
+# Written By Woland
+
+# A POSIX Script To Make New Python Virtual Enviorments & Install Packages
+# Inside It With pip If Specified
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+# Help Message
+if [ "$1" = "" -o "$1" = "-h" ]; then
+    echo -e "\n\tUsage: Run the Script With \$1 And If Needed, \$2, \$3 & \$4"
+    echo -e "\t       Where \$1 Is The First Argument And The New Virtual Env Name"
+    echo -e "\t       And \$2 ... Is The Name Of An Optional Package To Be Installed With pip Into The Virtual Env\n"
+    echo -e "\tExample: ./PyVirtEnv NewEnv PyQt5\n"
+    echo -e "\tYou Should Also Move This Script to Somewhere in Your \$PATH"
+    echo -e "\nFor More Info Visit: https://docs.python.org/3/library/venv.html"
+    exit 0
+fi
+
+# Make Directory 
+if [ -d $1 ]; then
+    echo "Directory with this name exists in $PWD"
+    exit 0
+else
+    mkdir $1
+fi
+
+# Setup Python Virtual Env & Source It
+python3 -m venv "$1"
+source "$1"/bin/activate
+
+# Handling Second, Third & Forth Arguments Individually
+if [ $2 ]; then
+    echo "Installing packages ..."
+    pip install $2
+else
+    echo "You did not specify any packages to be installed with pip. Skipping ..."
+fi
+
+if [ $3 ]; then
+    echo "Installing packages ..."
+    pip install $3
+fi
+
+if [ $4 ]; then
+    echo "Installing packages ..."
+    pip install $4
+fi
+
+# Priniting Info For The User
+tput setaf 6; echo -e "\nYou Should run: source "$PWD"/"$1"/bin/activate"
+tput setaf 1; echo -e "Your virtual env at "$PWD"/"$1" is ready for you!\n"
+tput setaf 6; echo "Done!"
+tput sgr0
+
+exit 0
