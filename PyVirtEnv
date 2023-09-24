@@ -9,7 +9,7 @@
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
 
 # Help Message
-if [ "$1" = "" -o "$1" = "-h" ]; then
+if [ "$1" = "-o" ] || [ "$1" = "-h" ]; then
     echo -e "\n\tUsage: Run the Script With \$1 And If Needed, \$2, \$3 & \$4"
     echo -e "\t       Where \$1 Is The First Argument And The New Virtual Env Name"
     echo -e "\t       And \$2 ... Is The Name Of An Optional Package To Be Installed With pip Into The Virtual Env\n"
