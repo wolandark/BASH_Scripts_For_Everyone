@@ -46,7 +46,9 @@
 * [vpn-ssh.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/vpn-ssh.sh)
 * [watcher.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/watcher.sh)
 * [word-lookup](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/word-lookup)
-* [PyVirtEnv](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/PyVirtEnv) 
+* [PyVirtEnv](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/PyVirtEnv)
+* [Slot Machine Game](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/Slot-Machine)
 
 **This repo is constantly growing**<br>
+Last update oct 8th 2023
  **Feel free to suggest or add scripts to this repo through PR**
