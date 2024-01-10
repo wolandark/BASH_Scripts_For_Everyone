@@ -48,6 +48,7 @@
 * [word-lookup](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/word-lookup)
 * [PyVirtEnv](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/PyVirtEnv)
 * [Slot Machine Game](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/Slot-Machine)
+* [Pacman Wrapper Whiptail](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/pacman-wrapper-whiptail.sh)
 
 **This repo is constantly growing**<br>
 Last update oct 8th 2023
