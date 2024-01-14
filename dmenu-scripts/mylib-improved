@@ -8,29 +8,33 @@
 
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
-
 search_dirs=("$HOME/Downloads/Documents" "$HOME/Documents")
-declare -A pdf_paths
+declare -A file_paths
 
-function findFiles(){
-  while IFS= read -r file; do
-    filename=$(basename "$file")
-    pdf_paths["$filename"]="$file"
-  done < <(fd --type f --extension pdf --extension epub --extension djvu "" "${search_dirs[@]}")
+function findFiles() {
+    while IFS= read -r file; do
+        file_paths["$file"]=$(basename "$file")
+    done < <(fd --type f --extension pdf --extension epub --extension djvu "" "${search_dirs[@]}")
 }
 
-function sendToDmenu(){
-  if selection=$(printf '%s
-    ' "${!pdf_paths[@]}" | dmenu -p 'Library:' -l 15 -fn 'monospace-12' -nb '#282828' -nf '#fbf1c7' -sb '#458588' -sf '#000' -l 20); then
-    zathura "${pdf_paths[$selection]}"
-  fi
+function sendToDmenu() {
+    if selection=$(printf '%s
+' "${file_paths[@]}" | dmenu -p 'Library:' -l 15 -fn 'monospace-12' -nb '#282828' -nf '#fbf1c7' -sb '#458588' -sf '#000' -l 20); then
+        for path in "${!file_paths[@]}"; do
+            if [[ "${file_paths[$path]}" == "$selection" ]]; then
+                echo "Opening: $path"
+                zathura "$path"
+                break
+            fi
+        done
+    else
+        echo "No selection made or dmenu closed."
+    fi
 }
 
-function main(){
-  findFiles
-  sendToDmenu
+function main() {
+    findFiles
+    sendToDmenu
 }
 
 main
-exit 0
-
