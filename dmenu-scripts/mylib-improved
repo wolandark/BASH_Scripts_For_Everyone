@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Written By Woland
+# List PDFs in given directory and opens selection in zathura
+#Dependency:
+#          dmenu fd zathura
+#          PDFs are assumed to be in ~/Downloads/Document & ~/Documents
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+search_dirs=("$HOME/Downloads/Documents" "$HOME/Documents")
+declare -A pdf_paths
+
+function findFiles(){
+  while IFS= read -r file; do
+    filename=$(basename "$file")
+    pdf_paths["$filename"]="$file"
+  done < <(fd --type f --extension pdf --extension epub --extension djvu "" "${search_dirs[@]}")
+}
+
+function sendToDmenu(){
+  if selection=$(printf '%s
+    ' "${!pdf_paths[@]}" | dmenu -p 'Library:' -l 15 -fn 'monospace-12' -nb '#282828' -nf '#fbf1c7' -sb '#458588' -sf '#000' -l 20); then
+    zathura "${pdf_paths[$selection]}"
+  fi
+}
+
+function main(){
+  findFiles
+  sendToDmenu
+}
+
+main
+exit 0
+
