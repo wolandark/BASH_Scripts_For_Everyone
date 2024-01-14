@@ -8,6 +8,7 @@
 
 # https://github.com/wolandark
 # https://github.com/wolandark/BASH_Scripts_For_Everyone
+
 search_dirs=("$HOME/Downloads/Documents" "$HOME/Documents")
 declare -A file_paths
 
