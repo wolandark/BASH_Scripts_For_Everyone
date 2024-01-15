@@ -19,6 +19,7 @@
       - [history.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/Qutebrowser%20Scripts/history.sh)
       - [quickmarks.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/Qutebrowser%20Scripts/quickmarks.sh)
 - [mylib](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/mylib)
+- [mylib-improved](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/mylib-improved)
 - [offline-wiki](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/offline-wiki)
 - [dmenu-config-editor](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/dmenu-scripts/dmenu-config-editor)
 
@@ -46,6 +47,7 @@
 * [vpn-ssh.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/vpn-ssh.sh)
 * [watcher.sh](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/watcher.sh)
 * [word-lookup](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/word-lookup)
+* [word-lookup-improved](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/word-lookup-improved)
 * [PyVirtEnv](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/PyVirtEnv)
 * [Slot Machine Game](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/Slot-Machine)
 * [Pacman Wrapper Whiptail](https://github.com/wolandark/BASH_Scripts_For_Everyone/blob/main/pacman-wrapper-whiptail.sh)
