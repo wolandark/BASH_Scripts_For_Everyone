@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# Written By Woland
+
+# A word lookup script in BASh
+
+#Dependency:
+#          dunst 
+
+# https://github.com/wolandark
+# https://github.com/wolandark/BASH_Scripts_For_Everyone
+
+getClipboardContent() {
+    if [ "$USEWAYLAND" = true ]; then
+        wl-paste -p
+    else
+        xclip -o
+    fi
+}
+
+getDefinitions() {
+    local word="$1"
+    local res=$(curl -s "https://api.dictionaryapi.dev/api/v2/entries/en_US/$word")
+    echo "$res" | jq -r '.[0].meanings[].definitions[]?.definition'
+}
+
+displayNotification() {
+    local word="$1"
+    local definitions="$2"
+    local separatedDefinition=$(echo -e "$definitions" | sed ':a;N;$!ba;s/\n/\n\n/g')
+    notify-send -h string:bgcolor:#ffffff -h string:fgcolor:#000000 -a "word-lookup" "$word" "$separatedDefinition" -i ~/.config/dunst/dict
+}
+
+showErrorNotification() {
+    local word="$1"
+    notify-send -h string:bgcolor:#ff0000 -h string:fgcolor:#ffffff -a "word-lookup" "Error" "No definitions found for '$word'" -i ~/.config/dunst/error
+    exit 1
+}
+
+main() {
+    local word=$(getClipboardContent)
+    
+    if [ -z "$word" ]; then
+        showErrorNotification "Clipboard is empty"
+    fi
+
+    local definitions=$(getDefinitions "$word")
+
+    if [ -z "$definitions" ]; then
+        showErrorNotification "$word"
+    fi
+
+    displayNotification "$word" "$definitions"
+}
+
+main
