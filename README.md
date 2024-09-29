@@ -1,3 +1,7 @@
+# This README is behind from the commits
+
+<hr> 
+
 # BASH Scripts For Everyone
 
 ## A collection of BASH scripts that might benefit all *nix users
