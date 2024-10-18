@@ -1,6 +1,9 @@
 #!/bin/bash 
 
-echo -e "\033[2J\033[?25l";
+# Hide Cursor
+echo -e "\033[?25l";
+# Use Alt Screen
+echo -ne "\x1b[?1049h"
 
 Rows=$(tput lines)
 Columns=$(tput cols)
@@ -39,8 +42,11 @@ do
 
     read -rt 0.1 -n 1 key
     if [[ $key == "q" ]]; then
-        pkill -P $$   # Terminate child processes
-		tput reset
+        pkill -P $$   # Terminate Child Processes
+        # Restore Main Screen
+        echo -ne "\x1b[?1049l"
+        # Restore Cursor
+        echo -ne "\x1B[?25h"
         exit
     fi
     sleep 0.05
