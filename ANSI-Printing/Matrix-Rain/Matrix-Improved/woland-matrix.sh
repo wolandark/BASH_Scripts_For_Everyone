@@ -13,7 +13,7 @@
 source terminfo.sh # Only works well in xterm, uxterm, rxvt, konsole, st
 
 # Init LINES COLUMNS With A No-Op
-shopt -s checkwinsize || return 1; :; :
+shopt -s checkwinsize || return 1; (:;:)
 
 # Setup Term, Hide Cursor, Switch To Alt Screen and Set Colors
 echo -ne "\033[?25l"
