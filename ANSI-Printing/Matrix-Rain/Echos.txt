@@ -1,0 +1,6 @@
+# Normal
+echo -e "\033[$((i-1));${X}H\033[32m$Char\033[$i;${X}H\033[37m$Char"
+# All Bold
+echo -e "\033[$((i-1));${X}H\033[32m$Char\033[$i;${X}H\033[1;37m$Char"
+# Just White Bold
+echo -e "\033[$((i-1));${X}H\033[32m$Char\033[$i;${X}H\033[1;37m$Char\033[22m"
