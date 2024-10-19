@@ -9,8 +9,11 @@
 #          Preferably Use Xterm or Xterm Compatible Terminal
 #
 
+# Get Directory Of Script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Include terminfo.sh To Store Initial BG and FG Colors
-source terminfo.sh # Only works well in xterm, uxterm, rxvt, konsole, st
+source "$SCRIPT_DIR/terminfo.sh" # Only works well in xterm, uxterm, rxvt, konsole, st
 
 # Init LINES COLUMNS With A No-Op
 shopt -s checkwinsize || return 1; (:;:)
